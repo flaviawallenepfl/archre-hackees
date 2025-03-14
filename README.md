@@ -1,5 +1,5 @@
 # ARCHRE
-# CHALLENGE TITLE
+# AI-Powered Writeups for Next-Gen Underwriting
 
 Introduce Case here. 
 
