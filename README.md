@@ -1,106 +1,126 @@
 # ARCHRE
+
 # AI-Powered Writeups for Next-Gen Underwriting
 
-Introduce Case here. 
-A good solution would provide complimentary assistance to an underwriter without biasing what is produced. A tool that collates and produces summaries as well as visualization on the findings whilst allowing the underwriter to ultimately decide what is relevant to them conveying their proposal more efficiently. 
+## Background
 
-Options for visualizations to use across different data points that the UW can quickly select rather than manually produce. 
+Insurance is a contract where an insurer provides financial protection against risks like accidents, illness, or property damage in exchange for premiums.
 
-Summarizations of relevant sections of the contract or changes YoY that provides a base for the UW to build on top of. 
+Reinsurance, on the other hand, is insurance for insurers. It allows insurance companies to transfer part of their risk to a reinsurer, reducing exposure to large losses and improving financial stability.
 
-Profiling of customers with respect to market segments / perils 
+Underwriting is the process of evaluating the risks associated with providing insurance and determining an appropriate premium.
 
-Macroeconomic factors which could have consequences on proposal. Stability of proposal currency etc 
-What is the current problem? 
+Actuaries build models to assess risk, set pricing, and predict future claims or losses. Underwriters (UWs) then use these models—along with guidelines and professional judgment—to make approval decisions, ensuring policies align with the company's risk tolerance and profitability.
 
-There are time consuming, repetitive tasks which place constraints on underwriter (UW) time during renewal period. We want to free up UW time by automating away the boring stuff, allowing them to write more business or focus on more complex submissions. 
+Before finalizing a reinsurance deal, the reinsurer’s underwriters and actuaries typically complete a combination of the following tasks:
 
-Examples of tasks which could be automated: 
+- Reviewing the cedant’s historical claims data.
+- Analyzing industry data for the relevant line of business.
+- Assessing modeling data—both industry-wide and in-house.
+- Examining year-on-year (YoY) contractual changes to understand shifts in risk exposure.
+- Profiling the cedant to evaluate the accuracy of their claims handling and past loss forecasts.
+- Consider macroeconomic factors such as interest rates, foreign exchange (forex) fluctuations, and inflation, and how these impact the deal.
 
-Summarizing contract clauses/changes which justify proposal. 
+## The Current Problem
 
-Presenting tabular data from Revo in final report. UWs currently screenshot tables from Revo and paste in final report. When data changes, this needs to be updated. 
+This process is highly complex, further complicated by the lack of a standardized format for submissions (the data associated with each deal). Underwriters often spend significant time on tasks such as:
 
-Text summary of key movements YoY. 
+- Reviewing lengthy contractual documents to assess how legal clause changes affect risk
+- Evaluating macroeconomic factors when risks are tied to specific countries or currencies
+- Checking modeling data for alignment with internal models and cedant assumptions
+- Profiling the cedant to determine whether their underwriting and claims handling are improving
+- Creating visualizations to highlight key risk changes or financial metrics that make the deal attractive or unattractive
 
-Producing charts/visualizations from Revo data. UW copy data into excel and create plots manually in excel. These plots are then copied into final report. 
+The final output of this process is an underwriter report. This report presents an argument for why the business should underwrite an agreed amount of risk for certain premium.
 
-Text summary of foreign exchange movements and subsequent impact on proposal. 
+## Task
 
-Cat modelling specifications: date, version, portfolios 
+Design a tool that assists underwriters creating the content and compiling the UW report. The tool should streamline the process of analyzing the data and assessing the risks to facilitate better decisions making.
 
-Provide narrative on whether the modelling aligns with exposure/experience data. 
+The challenge will be split into two phases:
 
-Legislative changes which are relevant to the proposal. 
+Phase 1:
+Design a tool which allows the UWs to interact with the contracts and supplementary data sets (news articles, economic data, industry data) to answer questions like:
 
+- Highlight key contractual/legal clause differences YoY in contract X?
+- Given contract X what macro-economic factors present a risk / opportunity when renewing this contract?
+- What regulatory legislative changes have been announced in the last year which could result in future losses being significantly different from historical losses?
 
+Phase 2:
+How can we ingest the submission files, which are typically in in excel format, to answer complicated questions about financial viability of the deal and compare Cedant claim data to industry records? Solutions should be generalisable to different excel file formats and layouts. The tool should help answer questions like:
 
-SC. Who are the users of this solution? 
+- Do the cedant historic losses align with industry standard models?
+- What is our expected return on Layer Y based on historical losses?
 
-Underwriters 
+Bonus Points:
+Are you able to find additional supplementary data which can help the UWs improve their overall assessment and subsequently the quality of the UW report.
 
- 
+## Data Set
 
-## Expected Outcome:
+- News articles from 2022-2025
+- Histroical claims data for hurricanes
+- Economic Data:
+  - Forex
+  - Inflation
+  - Interest
+- Submission Data:
+  - Historic claims
+  - Total insured value
+  - Contract wording: previous year and current year
+  - Contract layers
 
-Software that complements the UW’s process. UW still decide whether to: 
+## Guidance
 
-Summary of contractual changes YoY and impacts on the proposal. 
+To give you an understanding of what an UW report consists of, we have shared an example.
 
-Profiling of the of cedant. Notable news articles regarding company, org structure changes, strategy changes etc. Summary of current exposures on lines of business 
+The example UW report is a property catastrophe (property cat) contract which provides cover for Wind and Hail events in the Netherlands and Belgium. (submissions/netherlands/)
 
-Summary of macro-economic impacts on contract. How volatile is the currency? Is inflation stable in contract currency? 
+In addition to the UW report, you will find the submission documents and contract wording. This is the information the UW would use to determine whether they would underwrite this risk.
 
-Include layer details from current/previous year from Revo. 
+## Evaluation Set
 
-Include visuals of key movements. 
+Design a tool which when prompted by an UW, can generate and compile the the content for an UW report. There are two submissions which have all the necessary data, but do not have UW reports. These are:
 
-Summary of cat modelling details 
+- Florida - Perils: Hurricane, Fire, Windstorm, Flood
+- Turkey - Perils: Hurricane, Fire, Landslide, Tsunami
 
-Some UW reports we saw included: modelling date, version, YoY changes in TIV and AAL. 
+## Areas of Focus
 
-Legislation changes which are pertinent to the proposal. 
+As a consequence of every submission being different, UW reports do not follow a defined template. However, they typically make reference to the following:
+
+- Notable contract changes YoY and the subsequent impact to risk / exposure.
+- Macro-economic factors relevant to the proposal
+- Comparison of industry data to the cedant's submission data to validate alignment.
+- Use relevant news articles to highlight any shifts in risk or exposure with the region and line of business.
 
 ## The Pitch:
 
-Insert Pitchdeck here
+...
 
 ## Deep Dive Slides:
 
-Insert Deep Dive Slides here:
-
-## Further Information:
-
-Insert further information here
-
-## Resources:
-
-Please provide data here.
+...
 
 ## Judging Criteria:
 
-Complexity & Technical sophistication: Usage of appropriate services and technologies (10%) 
+Complexity & Technical sophistication: Usage of appropriate services and technologies (10%)
 
-Design: Usability of the solution (20%) 
+Design: Usability of the solution (20%)
 
-Viability: Possibility of realizing the solution (10%) 
+Viability: Possibility of realizing the solution (10%)
 
-Feasibility: Maturity level of developed solution (10%) 
+Feasibility: Maturity level of developed solution (10%)
 
-Creativity & Innovation: Surprise effect to the jury (30%) 
+Creativity & Innovation: Surprise effect to the jury (30%)
 
-Presentation: Communication of the developed solution (20%) 
+Presentation: Communication of the developed solution (20%)
 
 ## Point of Contact:
 
-Katrin (Physically present)  
+Katrin, Lorenza, Paul, Gabriel, Jude, Ben, Jon, Martin, Antoine, Juan
 
-Gabriel, Jude, Ben (Physically present)  
+## Prize - the winning team members will each receive:
 
-David, Paul (most probably online tbc)  
+Arch Re branded hoody.
 
-## Price - the winning team members will each receive:
-
-Arch Re branded hoodies. 
-
-Invite winning team to a lunch/dinner with senior management at Arch Re to discuss their final product and provide more information on Arch Re and the reinsurance business. 
+In addition, the winning team will be invited to a lunch/dinner with senior management at Arch Re to discuss their final product and provide more information on Arch Re and the reinsurance business.
