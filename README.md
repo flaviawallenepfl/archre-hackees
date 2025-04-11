@@ -2,6 +2,10 @@
 
 # AI-Powered Writeups for Next-Gen Underwriting
 
+## Useful Article to Understand Reinsurance
+
+[Types of Reinsurance](https://www.munichre.com/content/dam/munichre/contentlounge/website-pieces/documents/NL-Non-Proportional_30-03-2023.pdf/_jcr_content/renditions/original./NL-Non-Proportional_30-03-2023.pdf)
+
 ## Background
 
 Insurance is a contract where an insurer provides financial protection against risks like accidents, illness, or property damage in exchange for premiums.
