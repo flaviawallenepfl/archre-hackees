@@ -7,7 +7,7 @@ from openai.types import Completion, CompletionChoice, CompletionUsage
 # Load environment variables
 load_dotenv()
 
-
+ 
 # Set up OpenAI API key
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 

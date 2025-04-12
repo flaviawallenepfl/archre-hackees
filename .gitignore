@@ -1,0 +1,19 @@
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+*.db
+*.sqlite
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDE specific
+.vscode/
+
+# dotenv file containing sensitive keys
+.env
+
+
